@@ -18,6 +18,7 @@ $logfile = __DIR__ . '/../t3census-worker-lookup.log';
 // create a log channel
 $logger = new Logger('t3census-worker-lookup');
 $logger->pushHandler(new StreamHandler($logfile, Logger::WARNING));
+//TODO graylog
 
 $worker = new GearmanWorker();
 $worker->addServer('127.0.0.1', 4730);
