@@ -11,7 +11,6 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 
-$accountKey = '';
 $logfile = __DIR__ . '/../t3census-worker-lookup.log';
 
 
@@ -45,7 +44,7 @@ while (1) {
 
 
 function fetchHostnames(GearmanJob $job) {
-	global $accountKey, $logger;
+	global $logger;
 
 	$result = FALSE;
 	$ip = $job->workload();
