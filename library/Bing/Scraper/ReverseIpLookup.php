@@ -2,6 +2,7 @@
 namespace T3census\Bing\Scraper;
 
 use T3census\Url\UrlFetcher;
+use T3census\Bing\Scraper\Exception\EmptyBodyException;
 
 $dir = dirname(__FILE__);
 $libraryDir = realpath($dir . '/../../../library');
