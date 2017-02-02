@@ -1,17 +1,14 @@
 <?php
 
-$dir = dirname(__FILE__);
-$libraryDir = realpath($dir . '/../library');
-$vendorDir = realpath($dir . '/../vendor');
+require_once __DIR__.'/../vendor/autoload.php';
 
-require_once $libraryDir . '/Bing/Scraper/ReverseIpLookup.php';
-require_once $vendorDir . '/autoload.php';
-
+use Gelf\Publisher;
+use Gelf\Transport\UdpTransport;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\GelfHandler;
-use Gelf\Publisher;
-use Gelf\Transport\UdpTransport;
+use T3sec\BingScraper\ScraperSearch;
+use T3sec\BingScraper\Exception\EmptyBodyException;
 
 
 $logfile = __DIR__ . '/../t3census-worker-lookup.log';
@@ -54,16 +51,16 @@ function fetchHostnames(GearmanJob $job) {
 	$logger->addDebug('Processing IP', array('ip' => $ip));
 
 	try {
-		$objLookup = new \T3census\Bing\Scraper\ReverseIpLookup();
+		$objLookup = new ScraperSearch();
 		$objLookup->setEndpoint('http://www.bing.com/search');
 		$results = $objLookup->setQuery('ip:' . $ip)->getResults();
 		unset($objLookup);
-	} catch (\T3census\Bing\Scraper\Exception\EmptyBodyException $e) {
+	} catch (EmptyBodyException $e) {
 		$logger->addWarning($e->getMessage(), array('errorcode' => $e->getCode(), 'ip' => $ip));
 		$job->sendData(Logger::WARNING . ' ' . $e->getMessage());
 		$job->sendFail();
 		return;
-	} catch (Exception $e) {
+	} catch (\Exception $e) {
 		$logger->addError($e->getMessage(), array('errorcode' => $e->getCode(), 'ip' => $ip));
 		$job->sendData(Logger::ERROR . ' ' . $e->getMessage());
 		$job->sendException($e->getMessage());

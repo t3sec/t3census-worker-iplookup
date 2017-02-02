@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "32e5ad5d42fe3f57271521035090662a",
-    "content-hash": "2246dfdfeaca48e0316d41cf25f7bcd1",
+    "hash": "140b17750d77b4c94964f324de5cdac5",
+    "content-hash": "c0ce50676cfa1485b234d4646b14177d",
     "packages": [
         {
             "name": "graylog2/gelf-php",
@@ -323,13 +323,102 @@
                 "psr-3"
             ],
             "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "t3sec/bingscraper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/t3sec/php-library-scraper-bing.git",
+                "reference": "0f00603038f44dfa03fa3785c31d135d0fd2a0b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/t3sec/php-library-scraper-bing/zipball/0f00603038f44dfa03fa3785c31d135d0fd2a0b8",
+                "reference": "0f00603038f44dfa03fa3785c31d135d0fd2a0b8",
+                "shasum": ""
+            },
+            "require": {
+                "jwage/purl": "0.0.7",
+                "t3sec/urlhelper": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "T3sec\\BingScraper\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Krause",
+                    "email": "marcus#exp2017@t3sec.info"
+                }
+            ],
+            "description": "PHP scraping library",
+            "homepage": "https://github.com/t3sec/php-library-scraper-bing",
+            "keywords": [
+                "bing",
+                "scraper"
+            ],
+            "support": {
+                "source": "https://github.com/t3sec/php-library-scraper-bing/tree/master",
+                "issues": "https://github.com/t3sec/php-library-scraper-bing/issues"
+            },
+            "time": "2017-02-02 10:52:59"
+        },
+        {
+            "name": "t3sec/urlhelper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/t3sec/php-library-helper-url.git",
+                "reference": "ed8ba1aa8d0b2c1c9d42028ab1a3b067f3dcc18b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/t3sec/php-library-helper-url/zipball/ed8ba1aa8d0b2c1c9d42028ab1a3b067f3dcc18b",
+                "reference": "ed8ba1aa8d0b2c1c9d42028ab1a3b067f3dcc18b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "T3sec\\Url\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Krause",
+                    "email": "marcus#exp2017@t3sec.info"
+                }
+            ],
+            "description": "PHP  URL helper library",
+            "homepage": "https://github.com/t3sec/php-library-helper-url",
+            "keywords": [
+                "download",
+                "http",
+                "url"
+            ],
+            "support": {
+                "source": "https://github.com/t3sec/php-library-helper-url/tree/master",
+                "issues": "https://github.com/t3sec/php-library-helper-url/issues"
+            },
+            "time": "2017-02-02 10:38:50"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "t3sec/bingscraper": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
