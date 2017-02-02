@@ -11,11 +11,11 @@ use T3sec\BingScraper\ScraperSearch;
 use T3sec\BingScraper\Exception\EmptyBodyException;
 
 
-$logfile = __DIR__ . '/../t3census-worker-lookup.log';
+$logfile = __DIR__ . '/../t3census-worker-iplookup.log';
 
 
 // create a log channel
-$logger = new Logger('t3census-worker-lookup');
+$logger = new Logger('t3census-worker-iplookup');
 $logger->pushHandler(new StreamHandler($logfile, Logger::WARNING));
 $logger->pushHandler(new GelfHandler(new Publisher(new UdpTransport('127.0.0.1', 12201)), Logger::DEBUG));
 
