@@ -1,5 +1,5 @@
 {
-  "name": "t3census/worker-lookup",
+  "name": "t3census/worker-iplookup",
   "description": "Gearman worker for T3census IP lookup.",
   "keywords": [
     "t3census",

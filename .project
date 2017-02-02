@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>t3census-worker-lookup</name>
+	<name>t3census-worker-iplookup</name>
 	<comment>Gearman worker for T3census IP lookup</comment>
 	<projects>
 	</projects>
