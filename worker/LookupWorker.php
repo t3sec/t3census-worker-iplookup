@@ -50,9 +50,7 @@ while (1) {
 function fetchHostnames(GearmanJob $job) {
 	global $logger;
 
-	$result = FALSE;
 	$ip = $job->workload();
-	
 	$logger->addDebug('Processing IP', array('ip' => $ip));
 
 	try {
