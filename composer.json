@@ -1,18 +1,23 @@
 {
-    "name": "t3census/worker-lookup",
-    "description": "Gearman worker for T3census IP lookup.",
-    "keywords": ["t3census", "gearman", "php", "bing"],
-    "type": "project",
-    "authors": [
-        {
-            "name": "Marcus Krause",
-            "email": "marcus#exp2016@t3sec.info"
-        }
-    ],
-    "require": {
-    	"jwage/purl": "0.0.7",
-    	"necromant2005/gearman-stats": "1.2.1",
-        "monolog/monolog": "^1.22",
-        "graylog2/gelf-php": "^1.5"
+  "name": "t3census/worker-lookup",
+  "description": "Gearman worker for T3census IP lookup.",
+  "keywords": [
+    "t3census",
+    "gearman",
+    "php",
+    "bing"
+  ],
+  "type": "project",
+  "authors": [
+    {
+      "name": "Marcus Krause",
+      "email": "marcus#exp2016@t3sec.info"
     }
+  ],
+  "require": {
+    "jwage/purl": "0.0.7",
+    "necromant2005/gearman-stats": "1.2.1",
+    "monolog/monolog": "^1.22",
+    "graylog2/gelf-php": "^1.5"
+  }
 }
