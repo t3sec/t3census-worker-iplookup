@@ -10,7 +10,6 @@ use Monolog\Handler\GelfHandler;
 use T3sec\BingScraper\ScraperSearch;
 use T3sec\BingScraper\Exception\EmptyBodyException;
 
-
 $logfile = __DIR__ . '/../t3census-worker-iplookup.log';
 
 
